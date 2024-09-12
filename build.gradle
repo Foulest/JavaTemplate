@@ -1,0 +1,81 @@
+plugins {
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+    id 'maven-publish'
+    id 'application'
+    id 'java'
+}
+
+group = 'net.foulest'
+version = '1.0.0'
+description = 'JavaTemplate'
+
+// Set the language level to Java 8
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(8))
+    }
+}
+
+repositories {
+    // Maven central repository
+    mavenCentral()
+    mavenLocal()
+
+    // Local libraries
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    // JetBrains Annotations - for code inspection and documentation
+    // https://mvnrepository.com/artifact/org.jetbrains/annotations
+    compileOnly group: 'org.jetbrains', name: 'annotations', version: '24.1.0'
+
+    // Lombok - for reducing boilerplate code
+    // https://projectlombok.org
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.34'
+    annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.34'
+}
+
+tasks {
+    shadowJar {
+        mainClassName = 'net.foulest.template.Main'
+        archiveFileName.set("${project.name}-${project.version}.jar")
+    }
+
+    jar {
+        duplicatesStrategy = DuplicatesStrategy.INCLUDE
+        archiveFileName.set("${project.name}-${project.version}.jar")
+
+        // Set the 'Main-Class' attribute in the JAR manifest
+        manifest {
+            attributes 'Main-Class': 'net.foulest.template.Main'
+        }
+    }
+
+    compileJava {
+        dependsOn(clean)
+        options.encoding = 'UTF-8'
+    }
+
+    build {
+        dependsOn(shadowJar)
+    }
+
+    tasks.register('sourceJar', Jar) {
+        from sourceSets.main.allJava
+    }
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId = 'net.foulest.template'
+            artifactId = project.name
+            version = project.version
+
+            from components.java
+        }
+    }
+}
