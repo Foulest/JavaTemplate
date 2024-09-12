@@ -8,7 +8,11 @@ This is the template repository that I use for all of my Java projects.
 
 ## Features
 
-- ...
+- Templates for pull requests, bugs, improvements, features, and questions
+- Code of Conduct, Contributing, and Security guidelines
+- GitHub Actions for building, dependency checking, and code scanning
+- Gradle build system with Shadow plugin for creating shaded JARs
+- License file with the GNU General Public License v3
 
 ## How to Use
 
@@ -23,7 +27,6 @@ This is the template repository that I use for all of my Java projects.
 - [ ] Change the `README.md` file to your own project information.
 - [ ] Change the `LICENSE` file to your own license (default is GPL v3).
 - [ ] Change the issue templates and labels in the `.github/ISSUE_TEMPLATE` directory.
-- [ ] Change the issue and pull request labels in the `CONTRIBUTING.md` file.
 - [ ] Remove the `shadow` plugin from the `build.gradle` file if you don't want to use it.
 - [ ] Remove the pre-existing dependencies from the `build.gradle` file if you don't want to use them.
 
