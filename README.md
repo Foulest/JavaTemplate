@@ -19,7 +19,7 @@ This is the template repository that I use for all of my Java projects.
 1. Clone the repository.
 2. Open the project in your favorite IDE (preferably [IntelliJ IDEA](https://jetbrains.com/idea)).
 3. Modify the project to your liking using the `TODO` comments.
-4. Build the project using `build` or `shadowJar`.
+4. Build the project using `build`, `jar`, or `shadowJar`.
 5. Enjoy the template!
 
 ## Things to Change
