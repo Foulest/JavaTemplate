@@ -41,7 +41,7 @@ dependencies {
 tasks {
     jar {
         duplicatesStrategy = DuplicatesStrategy.INCLUDE
-        archiveFileName.set("${project.name}-${project.version}.jar")
+        archiveFileName.set("${project.name}-${project.version}-default.jar")
 
         // Set the 'Main-Class' attribute in the JAR manifest
         manifest {
