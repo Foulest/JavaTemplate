@@ -12,7 +12,7 @@ This is the template repository that I use for all of my Java projects.
 - Code of Conduct, Contributing, and Security guidelines
 - GitHub Actions for building, dependency checking, and code scanning
 - Gradle build system with Shadow plugin for creating shaded JARs
-- License file with the GNU General Public License v3
+- Lombok and JetBrains Annotations dependencies for cleaner code
 
 ## How to Use
 
