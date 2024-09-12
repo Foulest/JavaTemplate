@@ -1,5 +1,5 @@
 /*
- * Main - an all-in-one Java-based Windows repair and maintenance toolkit.
+ * JavaTemplate - a fully featured Java template with Gradle.
  * Copyright (C) 2024 Foulest (https://github.com/Foulest)
  *
  * This program is free software: you can redistribute it and/or modify
