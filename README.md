@@ -2,7 +2,6 @@
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
 [![CodeQL](https://github.com/Foulest/JavaTemplate/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/Foulest/JavaTemplate/actions/workflows/github-code-scanning/codeql)
-[![Downloads](https://img.shields.io/github/downloads/Foulest/JavaTemplate/total.svg)](https://github.com/Foulest/JavaTemplate/releases)
 
 This is the template repository that I use for all of my Java projects.
 
