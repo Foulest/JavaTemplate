@@ -8,12 +8,7 @@ This is the template repository that I use for all of my Java projects.
 
 ## Features
 
-- Deleting restrictive system policies
-- Running registry and system tweaks
-- Removing pre-installed bloatware
-- Cleaning unnecessary junk files
-- Repairing various disk issues
-- Scanning for malware with security software
+- ...
 
 ## How to Use
 
