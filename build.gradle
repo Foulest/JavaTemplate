@@ -39,11 +39,6 @@ dependencies {
 }
 
 tasks {
-    shadowJar {
-        mainClassName = 'net.foulest.template.Main'
-        archiveFileName.set("${project.name}-${project.version}.jar")
-    }
-
     jar {
         duplicatesStrategy = DuplicatesStrategy.INCLUDE
         archiveFileName.set("${project.name}-${project.version}.jar")
@@ -54,6 +49,11 @@ tasks {
         }
     }
 
+    shadowJar {
+        mainClassName = 'net.foulest.template.Main'
+        archiveFileName.set("${project.name}-${project.version}.jar")
+    }
+
     compileJava {
         dependsOn(clean)
         options.encoding = 'UTF-8'
@@ -61,6 +61,22 @@ tasks {
 
     build {
         dependsOn(shadowJar)
+    }
+
+    distZip {
+        dependsOn(shadowJar)
+    }
+
+    distTar {
+        dependsOn(shadowJar)
+    }
+
+    startScripts {
+        dependsOn(shadowJar)
+    }
+
+    startShadowScripts {
+        dependsOn(jar)
     }
 
     tasks.register('sourceJar', Jar) {
